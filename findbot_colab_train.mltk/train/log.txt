@@ -1,0 +1,267 @@
+CUDA_VISIBLE_DEVICES=
+No GPUs found, using CPU for training
+Failed to generate model summary, err: This model has not yet been built. Build the model first by calling `build()` or by calling the model on a batch of data.
+Traceback (most recent call last):
+  File "/home/bao/PycharmProjects/Findbot/.venv/lib/python3.12/site-packages/mltk/core/train_model.py", line 142, in train_model
+    summary = summarize_model(
+              ^^^^^^^^^^^^^^^^
+  File "/home/bao/PycharmProjects/Findbot/.venv/lib/python3.12/site-packages/mltk/core/summarize_model.py", line 101, in summarize_model
+    built_model.summary(print_fn=_writeln)
+  File "/home/bao/PycharmProjects/Findbot/.venv/lib/python3.12/site-packages/tf_keras/src/engine/training.py", line 3501, in summary
+    raise ValueError(
+ValueError: This model has not yet been built. Build the model first by calling `build()` or by calling the model on a batch of data.
+Dataset subset: training, found 23235 samples:
+         ao: 452
+    banhkeo: 452
+        bep: 452
+    botgiat: 452
+         ca: 452
+      cathu: 452
+      cahoi: 452
+      caphe: 452
+      carot: 452
+        cha: 452
+       chao: 452
+   chuadung: 452
+     congcu: 452
+        dau: 452
+        dep: 452
+     dochoi: 452
+  dodonghop: 451
+  dogiadung: 452
+      dohop: 452
+     douong: 452
+       dung: 452
+        gao: 452
+     gaolut: 452
+     gaonep: 452
+      giavi: 452
+       giay: 452
+   khoaitay: 452
+         mi: 452
+      migoi: 452
+     mypham: 452
+        noi: 452
+    phukien: 452
+       quan: 452
+        rau: 452
+      raucu: 452
+       sach: 452
+        sua: 452
+     suabot: 452
+    suatuoi: 452
+       thit: 452
+     thitbo: 452
+     thitga: 452
+    traicay: 452
+    traitao: 452
+   trangsuc: 452
+      trung: 452
+     xabong: 452
+    xinchao: 452
+    xucxich: 452
+  _unknown_: 1088
+Dataset subset: validation, found 5809 samples:
+         ao: 113
+    banhkeo: 113
+        bep: 113
+    botgiat: 113
+         ca: 113
+      cathu: 113
+      cahoi: 113
+      caphe: 113
+      carot: 113
+        cha: 113
+       chao: 113
+   chuadung: 113
+     congcu: 113
+        dau: 113
+        dep: 113
+     dochoi: 113
+  dodonghop: 113
+  dogiadung: 113
+      dohop: 113
+     douong: 113
+       dung: 113
+        gao: 113
+     gaolut: 113
+     gaonep: 113
+      giavi: 113
+       giay: 113
+   khoaitay: 113
+         mi: 113
+      migoi: 113
+     mypham: 113
+        noi: 113
+    phukien: 113
+       quan: 113
+        rau: 113
+      raucu: 113
+       sach: 113
+        sua: 113
+     suabot: 113
+    suatuoi: 113
+       thit: 113
+     thitbo: 113
+     thitga: 113
+    traicay: 113
+    traitao: 113
+   trangsuc: 113
+      trung: 113
+     xabong: 113
+    xinchao: 113
+    xucxich: 113
+  _unknown_: 272
+
+Using default ModelCheckpoint callback with following parameters:
+{'filepath': '/home/bao/.mltk/models/findbot_colab_train/train/weights/weights-{epoch:03d}-{val_accuracy:.4f}.h5',
+ 'mode': 'auto',
+ 'monitor': 'val_accuracy',
+ 'options': None,
+ 'save_best_only': True,
+ 'save_freq': 'epoch',
+ 'save_weights_only': True,
+ 'verbose': 0}
+Using default EarlyStopping callback with following parameters:
+{'min_delta': 0.0001,
+ 'mode': 'min',
+ 'monitor': 'val_student_loss',
+ 'patience': 30,
+ 'verbose': 1}
+Using default ReduceLROnPlateau callback with following parameters:
+{'factor': 0.95, 'min_delta': 0.01, 'monitor': 'accuracy', 'patience': 1}
+Enabling model checkpoints
+Using Keras callbacks: TerminateOnNaN, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
+Class weights:
+       ao = 1.01
+  banhkeo = 1.01
+      bep = 1.01
+  botgiat = 1.01
+       ca = 1.01
+    cathu = 1.01
+    cahoi = 1.01
+    caphe = 1.01
+    carot = 1.01
+      cha = 1.01
+     chao = 1.01
+ chuadung = 1.01
+   congcu = 1.01
+      dau = 1.01
+      dep = 1.01
+   dochoi = 1.01
+dodonghop = 1.01
+dogiadung = 1.01
+    dohop = 1.01
+   douong = 1.01
+     dung = 1.01
+      gao = 1.01
+   gaolut = 1.01
+   gaonep = 1.01
+    giavi = 1.01
+     giay = 1.01
+ khoaitay = 1.01
+       mi = 1.01
+    migoi = 1.01
+   mypham = 1.01
+      noi = 1.01
+  phukien = 1.01
+     quan = 1.01
+      rau = 1.01
+    raucu = 1.01
+     sach = 1.01
+      sua = 1.01
+   suabot = 1.01
+  suatuoi = 1.01
+     thit = 1.01
+   thitbo = 1.01
+   thitga = 1.01
+     thit = 1.01
+  traicay = 1.01
+  traitao = 1.01
+ trangsuc = 1.01
+    trung = 1.01
+   xabong = 1.01
+  xinchao = 1.01
+  xucxich = 1.01
+_unknown_ = 0.42
+Train kwargs:
+{'batch_size': 32,
+ 'callbacks': [<tf_keras.src.callbacks.TerminateOnNaN object at 0x79126ab065a0>,
+               <tf_keras.src.callbacks.ModelCheckpoint object at 0x79126a019bb0>,
+               <tf_keras.src.callbacks.EarlyStopping object at 0x79126a0181a0>,
+               <tf_keras.src.callbacks.ReduceLROnPlateau object at 0x79126a09c8c0>,
+               <tf_keras.src.callbacks.ModelCheckpoint object at 0x7912681e4560>],
+ 'class_weight': {0: 1.0079385736595523,
+                  1: 1.0079385736595523,
+                  2: 1.0079385736595523,
+                  3: 1.0079385736595523,
+                  4: 1.0079385736595523,
+                  5: 1.0079385736595523,
+                  6: 1.0079385736595523,
+                  7: 1.0079385736595523,
+                  8: 1.0079385736595523,
+                  9: 1.0079385736595523,
+                  10: 1.0079385736595523,
+                  11: 1.0079385736595523,
+                  12: 1.0079385736595523,
+                  13: 1.0079385736595523,
+                  14: 1.0079385736595523,
+                  15: 1.0079385736595523,
+                  16: 1.0101734707186645,
+                  17: 1.0079385736595523,
+                  18: 1.0079385736595523,
+                  19: 1.0079385736595523,
+                  20: 1.0079385736595523,
+                  21: 1.0079385736595523,
+                  22: 1.0079385736595523,
+                  23: 1.0079385736595523,
+                  24: 1.0079385736595523,
+                  25: 1.0079385736595523,
+                  26: 1.0079385736595523,
+                  27: 1.0079385736595523,
+                  28: 1.0079385736595523,
+                  29: 1.0079385736595523,
+                  30: 1.0079385736595523,
+                  31: 1.0079385736595523,
+                  32: 1.0079385736595523,
+                  33: 1.0079385736595523,
+                  34: 1.0079385736595523,
+                  35: 1.0079385736595523,
+                  36: 1.0079385736595523,
+                  37: 1.0079385736595523,
+                  38: 1.0079385736595523,
+                  39: 1.0079385736595523,
+                  40: 1.0079385736595523,
+                  41: 1.0079385736595523,
+                  42: 1.0079385736595523,
+                  43: 1.0079385736595523,
+                  44: 1.0079385736595523,
+                  45: 1.0079385736595523,
+                  46: 1.0079385736595523,
+                  47: 1.0079385736595523,
+                  48: 1.0079385736595523,
+                  49: 1.0079385736595523,
+                  50: 0.4187391868512111},
+ 'epochs': 75,
+ 'initial_epoch': 0,
+ 'sample_weight': None,
+ 'shuffle': True,
+ 'steps_per_epoch': None,
+ 'validation_batch_size': None,
+ 'validation_data': <_PrefetchDataset element_spec=(TensorSpec(shape=<unknown>, dtype=tf.int8, name=None), TensorSpec(shape=(None, 51), dtype=tf.int32, name=None))>,
+ 'validation_freq': 1,
+ 'validation_split': 0.0,
+ 'validation_steps': None,
+ 'verbose': 1,
+ 'x': <_PrefetchDataset element_spec=(TensorSpec(shape=<unknown>, dtype=tf.int8, name=None), TensorSpec(shape=(None, 51), dtype=tf.int32, name=None))>,
+ 'y': None}
+Starting model training ...
+Generating /home/bao/.mltk/models/findbot_colab_train/findbot_colab_train.h5
+
+
+*** Best training val_accuracy = 0.905
+
+
+Generating /home/bao/.mltk/models/findbot_colab_train/train/training-history.json
+Generating /home/bao/.mltk/models/findbot_colab_train/train/training-history.png
+Creating /home/bao/PycharmProjects/Findbot/findbot_colab_train.mltk.zip
