@@ -58,6 +58,7 @@ pip install -r requirements.txt
 ### 3. Chuẩn Bị Dữ Liệu
 
 Tải file `ngonluadata.zip` và giải nén:
+Link file: [https://drive.google.com/file/d/1qWuseka9wIfLXe-FJcniTyKoOhruPU3K/view?usp=drive_link]
 
 **Trên Windows:**
 - Giải nén file `ngonluadata.zip`
